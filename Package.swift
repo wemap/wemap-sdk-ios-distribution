@@ -1,8 +1,8 @@
 // swift-tools-version:5.9
 import PackageDescription
 
-let version = "0.28.0-dev"
-let baseURL = "https://github.com/wemap/wemap-sdk-ios-distribution/releases/download/\(version)"
+let version = "0.28.0-dev.2"
+let baseURL = "https://s3.eu-west-1.amazonaws.com/mobile.getwemap.com/releases/ios"
 
 let package = Package(
     name: "WemapSDKs",
@@ -23,11 +23,7 @@ let package = Package(
         .package(
             url: "https://github.com/maplibre/maplibre-gl-native-distribution.git",
             exact: "6.23.0"
-        ),
-        // .package(
-        //     url: "https://github.com/marmelroy/Zip.git",
-        //     exact: "2.1.2"
-        // )
+        )
     ],
     targets: [
         .target(
@@ -39,8 +35,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WemapCoreSDKBinary",
-            url: "\(baseURL)/WemapCoreSDK.zip",
-            checksum: "7ee795fcd5ec135109f157169b188ea05e3f4c2ce2721c0d77f89baf1a975bd1"
+            url: "\(baseURL)/core/\(version)/WemapCoreSDK.zip",
+            checksum: "75cabb0f0240f4077281c4bac1456a83184ab23be472621373a0f55dacfef307"
         ),
         .target(
             name: "WemapMapSDKWrapper",
@@ -48,13 +44,12 @@ let package = Package(
                 "WemapCoreSDKWrapper",
                 "WemapMapSDKBinary",
                 .product(name: "MapLibre", package: "maplibre-gl-native-distribution"),
-                // .product(name: "Zip", package: "Zip")
             ]
         ),
         .binaryTarget(
             name: "WemapMapSDKBinary",
-            url: "\(baseURL)/WemapMapSDK.zip",
-            checksum: "3dc79dd9b844979229a5b691fa7232e5dd32d2abac6554d8d1423a9de52baab9"
+            url: "\(baseURL)/map/\(version)/WemapMapSDK.zip",
+            checksum: "a1b2c415ead76302dd8387bfc4066ced7c1483bc04af9329d56727f0f33b0743"
         ),
         .target(
             name: "WemapGeoARSDKWrapper",
@@ -65,8 +60,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WemapGeoARSDKBinary",
-            url: "\(baseURL)/WemapGeoARSDK.zip",
-            checksum: "4d68567f327f55f92eb223bcfaa22f4ca5b1a31ec1c851a3f3a70fbe4d2318e5"
+            url: "\(baseURL)/geoar/\(version)/WemapGeoARSDK.zip",
+            checksum: "5e3101ed1251254f1a49ee18a5f73e8697842ce54d12396359df6ba72421636d"
         ),
         .target(
             name: "WemapPositioningSDKVPSARKitWrapper",
@@ -77,8 +72,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WemapPositioningSDKVPSARKitBinary",
-            url: "\(baseURL)/WemapPositioningSDKVPSARKit.zip",
-            checksum: "79cb72dab2c60ebf688963cf397acbc1f5f261433f4a4791ae708652302e3f24"
+            url: "\(baseURL)/positioning/vpsarkit/\(version)/WemapPositioningSDKVPSARKit.zip",
+            checksum: "f97509367dd19cea935d5f6b6b81ad7c38aed31e33851af3ae05e6f88c20e472"
         ),
          .target(
             name: "WemapPositioningSDKGPSWrapper",
@@ -89,8 +84,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WemapPositioningSDKGPSBinary",
-            url: "\(baseURL)/WemapPositioningSDKGPS.zip",
-            checksum: "28eb8623221694d724f7faf0c03021c461699a910493b54e6feeafc8b67b5845"
+            url: "\(baseURL)/positioning/gps/\(version)/WemapPositioningSDKGPS.zip",
+            checksum: "aa90727e8f650342162d21d7f6091fe51ef8ebcda67b27768909a0ca677e3a3c"
         )
     ]
 )
