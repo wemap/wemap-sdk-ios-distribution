@@ -1,7 +1,7 @@
 // swift-tools-version:5.9
 import PackageDescription
 
-let version = "0.28.0"
+let version = "0.28.1"
 let baseURL = "https://s3.eu-west-1.amazonaws.com/mobile.getwemap.com/releases/ios"
 
 let package = Package(
@@ -36,7 +36,7 @@ let package = Package(
         .binaryTarget(
             name: "WemapCoreSDKBinary",
             url: "\(baseURL)/core/\(version)/WemapCoreSDK.zip",
-            checksum: "d0f26c7b5a97344f498c168902641703c2d660827ac3d4a15bb15ad2cda7f5a5"
+            checksum: "4ffdec23463cb06de0d15d74c591772032fd39fe0fd9255ff410da62cb1c1c78"
         ),
         .target(
             name: "WemapMapSDKWrapper",
@@ -49,7 +49,7 @@ let package = Package(
         .binaryTarget(
             name: "WemapMapSDKBinary",
             url: "\(baseURL)/map/\(version)/WemapMapSDK.zip",
-            checksum: "873bd0f014217b393dc1fdf33ae4d515d50484c5f0c24aa47d2bb7d3757482b3"
+            checksum: "481272a00934f326d042dda9bc7e0e047dde0ad3898361a263659bedeaf2d6e4"
         ),
         .target(
             name: "WemapGeoARSDKWrapper",
@@ -61,7 +61,7 @@ let package = Package(
         .binaryTarget(
             name: "WemapGeoARSDKBinary",
             url: "\(baseURL)/geoar/\(version)/WemapGeoARSDK.zip",
-            checksum: "eed8111cec762c0f12b569f2006c05f6e9135e20dcc7235d5e48173e05472a1d"
+            checksum: "d34c26c5cfba17e11312227f8396c6b8f92e9cd376af962c924751763c230b84"
         ),
         .target(
             name: "WemapPositioningSDKVPSARKitWrapper",
@@ -73,7 +73,7 @@ let package = Package(
         .binaryTarget(
             name: "WemapPositioningSDKVPSARKitBinary",
             url: "\(baseURL)/positioning/vpsarkit/\(version)/WemapPositioningSDKVPSARKit.zip",
-            checksum: "cc3095bb55a2f7e215a9768ce72ce3fb5664f1787c6f2fb782020595ddfb0424"
+            checksum: "5c7a853a169cf792c6f4c96aad24cf85e2134298b7feb5c16979000c97e26557"
         ),
          .target(
             name: "WemapPositioningSDKGPSWrapper",
@@ -85,7 +85,7 @@ let package = Package(
         .binaryTarget(
             name: "WemapPositioningSDKGPSBinary",
             url: "\(baseURL)/positioning/gps/\(version)/WemapPositioningSDKGPS.zip",
-            checksum: "c276a98080a9ba78ebec8d3a794419943d95f975d3143185a92191725f0a110c"
+            checksum: "40eebcc0a6bfed3593815d96d3a319c52b668a340373aa728dc973610d1d5084"
         )
     ]
 )
