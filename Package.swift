@@ -22,7 +22,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/maplibre/maplibre-gl-native-distribution.git",
-            exact: "6.25.0"
+            exact: "6.26.0"
         )
     ],
     targets: [
