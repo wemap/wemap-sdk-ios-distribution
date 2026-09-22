@@ -24,7 +24,7 @@ Add the following dependency to your `Package.swift` file:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/wemap/wemap-sdk-ios-distribution.git", exact: "0.29.2")
+    .package(url: "https://github.com/wemap/wemap-sdk-ios-distribution.git", exact: "1.0.0-beta.1")
 ]
 ```
 
@@ -33,7 +33,7 @@ Or add it through Xcode:
 1. In your Xcode project or workspace, click on `File > Add Packages Dependencies...`
 2. Paste the following GitHub URL into the search bar in the top right corner: https://github.com/wemap/wemap-sdk-ios-distribution
 3. Select the `Dependency Rule` you want to apply to the Wemap SDKs
-    - We recommend selecting `Up to Next Minor Version` for the `Dependency Rule`, specifying the latest version (ex.: 0.29.2) as the minimum version. This allows you to select the most recently released stable patch version of the SDKs.
+    - We recommend selecting `Up to Next Minor Version` for the `Dependency Rule`, specifying the latest version (ex.: 1.0.0-beta.1) as the minimum version. This allows you to select the most recently released stable patch version of the SDKs.
 4. Click on `Add Package`.
 5. In the new window, click on the dropdown `Add to Target` and select your project target.
 6. Click `Add Package`.
