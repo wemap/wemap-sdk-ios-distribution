@@ -12,9 +12,9 @@ The Wemap SDKs provide comprehensive location tracking, routing, and navigation 
 
 Different Wemap SDKs have different requirements, but these are the common requirements applied to all of them.
 
-- iOS 13 or newer
+- iOS 15.0 or newer
 - Xcode 26.0 or newer
-- Swift 5.9 or newer
+- Swift 6.2 or newer
 
 ## Installation
 
@@ -32,8 +32,9 @@ Or add it through Xcode:
 
 1. In your Xcode project or workspace, click on `File > Add Packages Dependencies...`
 2. Paste the following GitHub URL into the search bar in the top right corner: https://github.com/wemap/wemap-sdk-ios-distribution
-3. Select the `Dependency Rule` you want to apply to the Wemap SDKs
-    - We recommend selecting `Up to Next Minor Version` for the `Dependency Rule`, specifying the latest version (ex.: 1.0.0-beta.1) as the minimum version. This allows you to select the most recently released stable patch version of the SDKs.
+3. Select the `Dependency Rule` you want to apply to the Wemap SDKs, using the latest version (ex.: 1.0.0-beta.1)
+    - **A pre-release — any version carrying a suffix, such as `-beta.1` — requires `Exact Version`.** Swift Package Manager excludes pre-releases from version ranges, so `Up to Next Minor Version` will not resolve one.
+    - For a stable version, we recommend selecting `Up to Next Minor Version`, specifying that version as the minimum version. This allows you to select the most recently released stable patch version of the SDKs.
 4. Click on `Add Package`.
 5. In the new window, click on the dropdown `Add to Target` and select your project target.
 6. Click `Add Package`.
