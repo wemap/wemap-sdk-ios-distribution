@@ -42,7 +42,7 @@ Or add it through Xcode:
 
 ## Documentation
 
-For comprehensive guides, API documentation, and examples, visit the [official Wemap SDKs for iOS documentation](https://developers.getwemap.com/docs/ios-native/getting-started).
+For comprehensive guides, API documentation, and examples, visit the [official Wemap SDKs for iOS documentation](https://developers.getwemap.com/docs/ios-native/1.x/getting-started).
 
 ## Examples
 
